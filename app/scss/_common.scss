@@ -34,7 +34,7 @@ input::-webkit-search-results-decoration {
 // ----------------------------------------------
 body {
   font-size: 16px;
-  line-height: 1,1875;
+  line-height: 1, 1875;
   font-family: 'Proxima Nova', Roboto, sans-serif;
   color: $text-color;
   overflow-x: hidden;
@@ -93,4 +93,13 @@ body {
 h1 {
   font-size: 24px;
   font-weight: 800;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 16px;
 }
