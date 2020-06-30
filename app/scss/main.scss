@@ -1,6 +1,9 @@
 @import 'fonts';
+@import '../libs/fontello/fontello';
 @import '../libs/normalize/normalize';
 
 @import 'vars';
 @import 'common';
-
+@import 'header';
+@import 'content';
+@import 'footer';
