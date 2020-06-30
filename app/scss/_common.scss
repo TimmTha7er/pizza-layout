@@ -14,27 +14,32 @@ html {
 //		Remove the X from input type search
 // ----------------------------------------------
 /* clears the 'X' from Internet Explorer */
-input[type=text]::-ms-clear, input[type=text]::-ms-reveal {  
-  display: none; width : 0; height: 0; 
+input[type='text']::-ms-clear,
+input[type='text']::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 /* clears the 'X' from Chrome */
 input::-webkit-search-decoration,
 input::-webkit-search-cancel-button,
 input::-webkit-search-results-button,
-input::-webkit-search-results-decoration { 
-  display: none; 
+input::-webkit-search-results-decoration {
+  display: none;
 }
 
 // ----------------------------------------------
 //		common
 // ----------------------------------------------
 body {
-  font-size: 15px;
-  line-height: 1.8;
+  font-size: 16px;
+  line-height: 1,1875;
   font-family: 'Proxima Nova', Roboto, sans-serif;
   color: $text-color;
   overflow-x: hidden;
+  background-color: #ffdf8c;
+  padding: 45px;
 
   // — убирает синее подсвечивание при клике на девайсах.
   -webkit-tap-highlight-color: transparent;
@@ -46,7 +51,7 @@ body {
 
 .link {
   text-decoration: none;
-  color: #fff;
+  color: $text-color;
   transition: color 0.25s ease;
   scroll-behavior: smooth !important;
 
@@ -54,7 +59,7 @@ body {
   }
   &:visited {
   }
-  &:hover {    
+  &:hover {
     color: $accent-color;
   }
   &:active {
@@ -62,23 +67,12 @@ body {
   }
 }
 
-.icon {
-  display: inline-block;
-
-  &::before,
-  &::after {
-    font-family: 'fontello';
-    font-size: 20px;
-    color: #fff;
-  }
-
-  &-commenting:before { content: '\f27a'; } /* '' */
-}
-
-
 .container {
   max-width: 1340px;
   margin: 0 auto;
+  background: #ffffff;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
 
   @media only screen and (max-width: 1200px) {
     max-width: 970px;
@@ -96,4 +90,7 @@ body {
   }
 }
 
-
+h1 {
+  font-size: 24px;
+  font-weight: 800;
+}
