@@ -13,7 +13,7 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding-bottom: 40px;
+    padding-bottom: 32px;
     // margin-bottom: 40px;
     // border-bottom: 1px solid #f4f4f4;
   }
@@ -22,6 +22,7 @@
     display: flex;
     justify-content: space-between;
     font-size: 22px;
+    padding-left:  10px;
     margin-bottom: 40px;
   }
 
@@ -45,11 +46,11 @@
     font-weight: bold;
     color: $accent-color;
     position: relative;
-    padding-right: 30px;
+    padding-right: 20px;
 
     &::before {
       position: absolute;
-      right: 0px;
+      right: -10px;
       top: 0;
     }
   }
@@ -60,10 +61,13 @@
     background-color: transparent;
   }
   &__btn-pay {
+    padding: 20px 40px 16px 40px;
   }
 }
 
 .shopping-list {
+  margin-bottom: 12px;
+
   &__item {
     display: flex;
     justify-content: space-between;
@@ -78,6 +82,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-right: 50px;
   }
 
   &__item-img-wrap {
@@ -91,7 +96,7 @@
   }
 
   &__item-info {
-    margin-left: 15px;
+    margin-left: 22px;
   }
 
   &__item-name {

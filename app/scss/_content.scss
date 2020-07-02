@@ -2,19 +2,25 @@
 //		content
 // ----------------------------------------------
 .content {
-  padding: 50px 80px;
+  padding: 40px 50px 50px 66px;
 
   &__top-line {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 38px;
   }
 
   &__pizza-list {
     display: flex;
     flex-wrap: wrap;
-    // justify-content: space-evenly;
+    justify-content: space-between;
     margin: 0 -10px;
   }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
 }
 
 .categories {
@@ -44,6 +50,7 @@
   font-size: 14px;
   font-weight: bold;
   padding: 14px 0;
+  letter-spacing: 0.3px;
 
   &__label {
     cursor: pointer;
@@ -63,13 +70,14 @@
 .sort-popup {
   position: absolute;
   background: #ffffff;
-  padding: 14px 0;
+  padding: 18px 0 12px 0;
   border-radius: 10px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);
 
+
   &__item {
     list-style-type: none;
-    padding: 10px 16px;
+    padding: 11px 16px;
     cursor: pointer;
     transition: background-color 0.25s ease;
 
@@ -102,7 +110,7 @@
   &__img-wrap {
     max-height: 260px;
     max-width: 260px;
-    margin: 0 auto;
+    margin: 0 auto 12px auto;
   }
 
   &__img {
@@ -118,6 +126,7 @@
     background: #f3f3f3;
     border-radius: 10px;
     padding: 7px;
+    margin-bottom: 17px;
   }
 
   &__base-list {
@@ -151,7 +160,7 @@
 
   &__size {
     flex: 0 0 33.3333%;
-    padding: 10px;
+    padding: 9px;
     border-radius: 5px;
     cursor: pointer;
 
@@ -169,24 +178,35 @@
 
   &__bot-line {
     display: flex;
-    justify-content: center;
-    align-items: baseline;
-    padding-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+
   }
 
   &__price {
-    flex: 0 0 50%;
+    // flex: 0 0 50%;
     font-size: 22px;
+    text-align: left;
   }
 
   &__btn {
-    flex: 0 0 50%;
+    // flex: 0 0 50%;
     font-size: 16px;
     color: $accent-color;
-    padding: 10px 0;
+    padding: 10px 14px 6px 14px;
     border-radius: 30px;
-    border: 1px solid #eb5a1e;
+    border: 1px solid $accent-color;
     cursor: pointer;
+
+    &:hover {
+      background-color: $accent-color;
+      color: #fff;
+
+      .pizza__count {
+        background-color: #fff;
+        color: $accent-color;
+      }
+    }
   }
 
   &__count {
