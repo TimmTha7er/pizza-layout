@@ -7,14 +7,14 @@
   &__top-line {
     display: flex;
     justify-content: space-between;
-	}
-	
-	&__pizza-list {
-		display: flex;
-		flex-wrap: wrap;
-		// justify-content: space-evenly;
-		margin: 0 -10px;
-	}
+  }
+
+  &__pizza-list {
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-evenly;
+    margin: 0 -10px;
+  }
 }
 
 .categories {
@@ -93,15 +93,20 @@
   max-width: 280px;
   font-size: 14px;
   font-weight: bold;
-	text-align: center;
-	// flex: 0 0 25%;
-	flex: 1 1 200px;
+  text-align: center;
+  // flex: 0 0 25%;
+  flex: 1 1 200px;
   margin: 0 10px;
-	margin-bottom: 45px;
+  margin-bottom: 45px;
+
+  &__img-wrap {
+    max-height: 260px;
+    max-width: 260px;
+    margin: 0 auto;
+  }
 
   &__img {
-		max-width: 100%;
-		max-height: 260px;
+    max-width: 100%;
   }
 
   &__name {
@@ -135,7 +140,7 @@
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
     }
     &_disable {
-      color: #cbcbcb;
+      color: $disable;
     }
   }
 
@@ -158,7 +163,7 @@
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
     }
     &_disable {
-      color: #cbcbcb;
+      color: $disable;
     }
   }
 
@@ -172,8 +177,8 @@
   &__price {
     flex: 0 0 50%;
     font-size: 22px;
-	}
-	
+  }
+
   &__btn {
     flex: 0 0 50%;
     font-size: 16px;
@@ -182,8 +187,8 @@
     border-radius: 30px;
     border: 1px solid #eb5a1e;
     cursor: pointer;
-	}
-	
+  }
+
   &__count {
     display: inline-block;
     width: 22px;

@@ -33,7 +33,7 @@
   &__title {
   }
   &__clear {
-    color: #b6b6b6;
+    color: $text-lighter;
     cursor: pointer;
   }
 
@@ -52,15 +52,14 @@
       right: 0px;
       top: 0;
     }
-	}
-	
-	&__btn-back {
-    border: 1px solid #D3D3D3;
-    color: #d0d0d0;
-    background-color: transparent;      
+  }
+
+  &__btn-back {
+    border: 1px solid $text-lighter;
+    color: $text-lighter;
+    background-color: transparent;
   }
   &__btn-pay {
-
   }
 }
 
@@ -81,9 +80,14 @@
     align-items: center;
   }
 
+  &__item-img-wrap {
+    max-height: 80px;
+    max-width: 80px;
+    overflow: hidden;
+  }
+
   &__item-img {
     max-width: 100%;
-    max-height: 80px;
   }
 
   &__item-info {
@@ -96,62 +100,63 @@
 
   &__item-base,
   &__item-size {
-		font-weight: normal;
+    font-weight: normal;
     font-size: 18px;
     color: #8d8d8d;
   }
 
   &__btns-block {
     display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-	
+    justify-content: center;
+    align-items: center;
+  }
 
-
-  &__btn-add, &__btn-minus, &__item-delete {
-		position: relative;
+  &__btn-add,
+  &__btn-minus,
+  &__item-delete {
+    position: relative;
     border-radius: 50%;
-		border: 2px solid $accent-color;
-		height: 32px;
-		width: 32px;
-		// padding: 5px;
-		font-size: 16px;
+    border: 2px solid $accent-color;
+    height: 32px;
+    width: 32px;
+    // padding: 5px;
+    font-size: 16px;
+    cursor: pointer;
 
-		&::before {
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			transform: translate(-50%,-50%);
-			margin: auto;
-			color: $accent-color;
-		}
-	}
-	
-	&__item-delete {
-		border-color: #D0D0D0;
+    &::before {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      margin: auto;
+      color: $accent-color;
+    }
+  }
 
-		&::before {
-			// font-weight: 100;
-			font-size: 14px;
-			color: #D0D0D0;
-		}
-	}
+  &__item-delete {
+    border-color: $text-lighter;
+
+    &::before {
+      // font-weight: 100;
+      font-size: 14px;
+      color: $text-lighter;
+    }
+  }
 
   &__btn-minus {
   }
 
   &__item-count {
-		margin: 0 12px;
+    margin: 0 12px;
   }
 
   &__item-price {
-		position: relative;
+    position: relative;
 
-		&::before {
-			position: absolute;
-			right: -30px;
-			top: 0;
-		}
+    &::before {
+      position: absolute;
+      right: -30px;
+      top: 0;
+    }
   }
 }
