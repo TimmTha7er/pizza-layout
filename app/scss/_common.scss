@@ -11,25 +11,6 @@ html {
 }
 
 // ----------------------------------------------
-//		Remove the X from input type search
-// ----------------------------------------------
-/* clears the 'X' from Internet Explorer */
-input[type='text']::-ms-clear,
-input[type='text']::-ms-reveal {
-  display: none;
-  width: 0;
-  height: 0;
-}
-
-/* clears the 'X' from Chrome */
-input::-webkit-search-decoration,
-input::-webkit-search-cancel-button,
-input::-webkit-search-results-button,
-input::-webkit-search-results-decoration {
-  display: none;
-}
-
-// ----------------------------------------------
 //		common
 // ----------------------------------------------
 body {
@@ -75,31 +56,51 @@ body {
   border-radius: 10px;
 
   @media only screen and (max-width: 1200px) {
-    max-width: 970px;
-  }
-  @media only screen and (max-width: 992px) {
-    max-width: 750px;
-  }
-  @media only screen and (max-width: 768px) {
-    max-width: 540px;
-    padding: 0 15px;
-  }
-  @media only screen and (max-width: 480px) {
     max-width: none;
-    padding: 0 5px;
+    padding: 0 15px;
+    // max-width: 970px;
   }
+  // @media only screen and (max-width: 992px) {
+  //   max-width: 750px;
+  // }
+  // @media only screen and (max-width: 768px) {
+  //   max-width: 540px;
+  //   padding: 0 15px;
+  // }
+  // @media only screen and (max-width: 480px) {
+  //   max-width: none;
+  //   padding: 0 5px;
+  // }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: bold;
 }
 
 h1 {
   font-size: 24px;
-  font-weight: 800;
 }
 
 h2 {
-  font-weight: bold;
   font-size: 32px;
+}
+
+h3 {
+  font-size: 22px;
 }
 
 h4 {
   font-size: 16px;
+}
+
+.button {
+  font-size: 16px;
+  padding: 18px 34px;
+  background-color: $accent-color;
+  border-radius: 30px;
+  color: #fff;
 }

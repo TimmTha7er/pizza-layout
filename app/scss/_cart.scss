@@ -1,0 +1,157 @@
+// ----------------------------------------------
+//		cart
+// ----------------------------------------------
+.cart {
+  padding: 95px 0;
+
+  &__container {
+    max-width: 825px;
+    box-shadow: none;
+  }
+
+  &__top-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 40px;
+    // margin-bottom: 40px;
+    // border-bottom: 1px solid #f4f4f4;
+  }
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+    margin-bottom: 40px;
+  }
+
+  &__btns-block {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+  }
+  &__clear {
+    color: #b6b6b6;
+    cursor: pointer;
+  }
+
+  &__total-count {
+    font-weight: bold;
+  }
+
+  &__total-price {
+    font-weight: bold;
+    color: $accent-color;
+    position: relative;
+    padding-right: 30px;
+
+    &::before {
+      position: absolute;
+      right: 0px;
+      top: 0;
+    }
+	}
+	
+	&__btn-back {
+    border: 1px solid #D3D3D3;
+    color: #d0d0d0;
+    background-color: transparent;      
+  }
+  &__btn-pay {
+
+  }
+}
+
+.shopping-list {
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 30px 0;
+    border-top: 1px solid #f4f4f4;
+  }
+
+  &__item-descr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item-img {
+    max-width: 100%;
+    max-height: 80px;
+  }
+
+  &__item-info {
+    margin-left: 15px;
+  }
+
+  &__item-name {
+    margin-bottom: 5px;
+  }
+
+  &__item-base,
+  &__item-size {
+		font-weight: normal;
+    font-size: 18px;
+    color: #8d8d8d;
+  }
+
+  &__btns-block {
+    display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+
+
+  &__btn-add, &__btn-minus, &__item-delete {
+		position: relative;
+    border-radius: 50%;
+		border: 2px solid $accent-color;
+		height: 32px;
+		width: 32px;
+		// padding: 5px;
+		font-size: 16px;
+
+		&::before {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+			margin: auto;
+			color: $accent-color;
+		}
+	}
+	
+	&__item-delete {
+		border-color: #D0D0D0;
+
+		&::before {
+			// font-weight: 100;
+			font-size: 14px;
+			color: #D0D0D0;
+		}
+	}
+
+  &__btn-minus {
+  }
+
+  &__item-count {
+		margin: 0 12px;
+  }
+
+  &__item-price {
+		position: relative;
+
+		&::before {
+			position: absolute;
+			right: -30px;
+			top: 0;
+		}
+  }
+}
