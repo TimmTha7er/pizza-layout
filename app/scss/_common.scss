@@ -24,6 +24,17 @@ body {
 
   // — убирает синее подсвечивание при клике на девайсах.
   -webkit-tap-highlight-color: transparent;
+
+  @media only screen and (max-width: 992px) {
+    padding: 25px;
+  }
+  @media only screen and (max-width: 768px) {
+    padding: 15px;
+  }
+  @media only screen and (max-width: 480px) {
+    padding: 5px;
+  }
+
 }
 
 .hidden {
@@ -84,9 +95,6 @@ h5 {
 h1 {
   font-size: 24px;
 
-  @media only screen and (max-width: 992px) {
-    
-  }
   @media only screen and (max-width: 768px) {
     font-size: 22px;
   }
@@ -97,10 +105,24 @@ h1 {
 
 h2 {
   font-size: 32px;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 28px;
+  }
+  @media only screen and (max-width: 480px) {
+    font-size: 24px;
+  }
 }
 
 h3 {
   font-size: 22px;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 18px;
+  }
+  @media only screen and (max-width: 480px) {
+    font-size: 16px;
+  }
 }
 
 h4 {
@@ -114,6 +136,13 @@ h4 {
   border-radius: 30px;
   color: #fff;
   cursor: pointer;
+
+  @media only screen and (max-width: 768px) {
+    padding: 15px 29px 11px 29px;
+  }
+  @media only screen and (max-width: 480px) {
+    // padding: 10px 24px 6px 24px;
+  }
 }
 
 @media only screen and (max-width: 1200px) {

@@ -4,9 +4,26 @@
 .cart {
   padding: 95px 0;
 
+  @media only screen and (max-width: 992px) {
+    padding: 55px 0;
+  }
+  @media only screen and (max-width: 768px) {
+    padding: 45px 0;
+  }
+  @media only screen and (max-width: 480px) {
+    padding: 25px 0;
+  }
+
   &__container {
     max-width: 825px;
     box-shadow: none;
+
+    @media only screen and (max-width: 768px) {
+      padding: 0 10px;
+    }
+    @media only screen and (max-width: 480px) {
+      padding: 0 5px;
+    }
   }
 
   &__top-line {
@@ -14,28 +31,69 @@
     justify-content: space-between;
     align-items: baseline;
     padding-bottom: 32px;
-    // margin-bottom: 40px;
-    // border-bottom: 1px solid #f4f4f4;
+
+    @media only screen and (max-width: 480px) {
+      flex-direction: column;
+    }
   }
 
   &__details {
     display: flex;
     justify-content: space-between;
     font-size: 22px;
-    padding-left:  10px;
+    padding-left: 10px;
     margin-bottom: 40px;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 18px;
+    }
+    @media only screen and (max-width: 480px) {
+      font-size: 16px;
+    }
+  }
+
+  &__title {
+    @media only screen and (max-width: 480px) {
+      margin-bottom: 15px;
+    }
+  }
+  &__clear {
+    color: $text-lighter;
+    cursor: pointer;
   }
 
   &__btns-block {
     display: flex;
     justify-content: space-between;
+
+    @media only screen and (max-width: 480px) {
+      flex-direction: column;
+    }
   }
 
-  &__title {
-  }
-  &__clear {
+  &__btn-back {
+    border: 1px solid $text-lighter;
     color: $text-lighter;
-    cursor: pointer;
+    background-color: transparent;
+
+    &_hidden {
+      @media only screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    @media only screen and (max-width: 480px) {
+      margin-bottom: 10px;
+    }
+  }
+  &__btn-pay {
+    padding: 20px 40px 16px 40px;
+
+    &_hidden {
+      @media only screen and (max-width: 768px) {
+        display: none;
+      }
+    }
   }
 
   &__total-count {
@@ -52,30 +110,41 @@
       position: absolute;
       right: -10px;
       top: 0;
-    }
-  }
 
-  &__btn-back {
-    border: 1px solid $text-lighter;
-    color: $text-lighter;
-    background-color: transparent;
-  }
-  &__btn-pay {
-    padding: 20px 40px 16px 40px;
+      @media only screen and (max-width: 768px) {
+        right: -5px;
+        top: 2px;
+      }
+    }
   }
 }
 
 .shopping-list {
   margin-bottom: 12px;
 
+  @media only screen and (max-width: 480px) {
+    max-width: 300px;
+  }
+
   &__item {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     font-size: 22px;
     font-weight: bold;
     padding: 30px 0;
     border-top: 1px solid #f4f4f4;
+
+    @media only screen and (max-width: 768px) {
+      // flex-wrap: wrap;
+      font-size: 18px;
+    }
+    @media only screen and (max-width: 480px) {
+      flex-wrap: wrap;
+      font-size: 16px;
+      justify-content: space-evenly;
+    }
   }
 
   &__item-descr {
@@ -83,12 +152,21 @@
     justify-content: center;
     align-items: center;
     padding-right: 50px;
+
+    @media only screen and (max-width: 768px) {
+      padding-right: 0;
+    }
+    @media only screen and (max-width: 480px) {
+      width: 100%;
+      margin-bottom: 15px;
+    }
   }
 
   &__item-img-wrap {
     max-height: 80px;
     max-width: 80px;
     overflow: hidden;
+    flex-shrink: 0;
   }
 
   &__item-img {
@@ -97,6 +175,13 @@
 
   &__item-info {
     margin-left: 22px;
+
+    @media only screen and (max-width: 768px) {
+      margin-left: 10px;
+    }
+    @media only screen and (max-width: 480px) {
+      margin-left: 5px;
+    }
   }
 
   &__item-name {
@@ -108,12 +193,26 @@
     font-weight: normal;
     font-size: 18px;
     color: #8d8d8d;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 16px;
+    }
+    @media only screen and (max-width: 480px) {
+      font-size: 14px;
+    }
   }
 
   &__btns-block {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+    @media only screen and (max-width: 480px) {
+      flex-direction: row;
+    }
   }
 
   &__btn-add,
@@ -142,9 +241,15 @@
     border-color: $text-lighter;
 
     &::before {
-      // font-weight: 100;
       font-size: 14px;
       color: $text-lighter;
+    }
+
+    @media only screen and (max-width: 480px) {
+      position: absolute;
+      top: 35px;
+      right: -5px;
+
     }
   }
 
@@ -157,10 +262,11 @@
 
   &__item-price {
     position: relative;
+    padding-right: 30px;
 
     &::before {
       position: absolute;
-      right: -30px;
+      right: 0px;
       top: 0;
     }
   }
