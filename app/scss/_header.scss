@@ -5,7 +5,6 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  // align-items: top;
   padding: 55px 40px 32px 80px;
 
   &::after {
@@ -17,6 +16,23 @@
     transform: translateX(-50%);
     height: 1px;
     background: #f7f7f7;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @media only screen and (max-width: 768px) {
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 25px;
+  }
+  @media only screen and (max-width: 480px) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
@@ -30,11 +46,15 @@
 
   &__text {
     padding-left: 15px;
+
+    @media only screen and (max-width: 480px) {
+      // display: flex;
+      // align-items: center;
+    }
   }
 
   &__title {
     text-transform: uppercase;
-    // line-height: 1.1;
     font-weight: 800;
   }
 
@@ -42,10 +62,19 @@
     color: $text-lighter;
     font-weight: normal;
     line-height: 1;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    margin-bottom: 25px;
   }
 }
 .user-bar {
   // max-width: 155px;
+  flex-shrink: 0;
   border-radius: 30px;
   background: $accent-color;
   color: #fff;
@@ -61,20 +90,47 @@
   }
 
   &__summ {
-		position: relative;
+    position: relative;
 
     &::after {
-			position: absolute;
-			content: '';
-			width: 1px;
+      position: absolute;
+      content: '';
+      width: 1px;
       height: 25px;
-			right: 0;
-			top: 50%;
-			margin-top: -12.5px;
-			background: rgba(255, 255, 255, .25);
+      right: 0;
+      top: 50%;
+      margin-top: -12.5px;
+      background: rgba(255, 255, 255, 0.25);
+
+      @media only screen and (max-width: 768px) {
+        display: none;
+      }
+      @media only screen and (max-width: 480px) {
+        display: block;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+      padding-bottom: 7px;
+    }
+    @media only screen and (max-width: 480px) {
+      border: none;
     }
   }
 
   &__cart {
+  }
+
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px 7px;
+  }
+  @media only screen and (max-width: 480px) {
+    flex-direction: row;
+    padding: 10px 35px;
+
   }
 }
