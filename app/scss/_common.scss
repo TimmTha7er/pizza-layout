@@ -74,14 +74,12 @@ body {
   // @media only screen and (max-width: 992px) {
   //   max-width: 750px;
   // }
-  // @media only screen and (max-width: 768px) {
-  //   max-width: 540px;
-  //   padding: 0 15px;
-  // }
-  // @media only screen and (max-width: 480px) {
-  //   max-width: none;
-  //   padding: 0 5px;
-  // }
+  @media only screen and (max-width: 768px) {
+    padding: 0 10px;
+  }
+  @media only screen and (max-width: 480px) {
+    padding: 0 5px;
+  }
 }
 
 h1,
@@ -135,6 +133,7 @@ h4 {
   background-color: $accent-color;
   border-radius: 30px;
   color: #fff;
+  text-decoration: none;
   cursor: pointer;
 
   @media only screen and (max-width: 768px) {
