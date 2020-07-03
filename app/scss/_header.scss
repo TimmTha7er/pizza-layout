@@ -46,11 +46,6 @@
 
   &__text {
     padding-left: 15px;
-
-    @media only screen and (max-width: 480px) {
-      // display: flex;
-      // align-items: center;
-    }
   }
 
   &__title {
@@ -73,33 +68,31 @@
   }
 }
 .user-bar {
-  // max-width: 155px;
   flex-shrink: 0;
   border-radius: 30px;
-  background: $accent-color;
-  color: #fff;
   font-weight: bold;
-  cursor: pointer;
   text-decoration: none;
-  padding: 12px 24px 16px 24px;
+  color: #fff;
+  padding: 14px 20px 14px 20px;
+  background: $accent-color;
+  cursor: pointer;
 
   &__cart,
   &__summ {
     display: inline-block;
-    // padding: 17px 15px;
     padding: 3px;
   }
 
   &__summ {
     position: relative;
-    padding-right: 35px;
+    padding-right: 20px;
 
     &::after {
       position: absolute;
       content: '';
       width: 1px;
       height: 25px;
-      right: 0;
+      right: -8px;
       top: 50%;
       margin-top: -12.5px;
       background: rgba(255, 255, 255, 0.25);
@@ -114,8 +107,8 @@
 
     &::before {
       position: absolute;
-      right: 10px;
-      top: 2px;
+      right: 0px;
+      top: 3px;
     }
 
     @media only screen and (max-width: 768px) {
@@ -133,8 +126,8 @@
 
     &::before {
       position: absolute;
-      left: 5px;
-      top: 0;
+      left: 12px;
+      top: 3px;
     }
   }
 
@@ -143,6 +136,7 @@
     justify-content: center;
     flex-direction: column;
     padding: 15px 7px;
+    border-radius: 20px;
   }
   @media only screen and (max-width: 480px) {
     flex-direction: row;
