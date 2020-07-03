@@ -62,6 +62,8 @@
     &_active {
       color: #fff;
       background-color: #282828;
+
+     
     }
 
     &:hover {
@@ -81,6 +83,18 @@
       width: auto;
     }
   }
+
+  &__item_active {
+    &:hover {
+      background-color: rgba(40, 40, 40, 0.685);
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+    }
+    &:active {
+      box-shadow: inset 0px 4px 8px rgba(255, 255, 255, 0.5);
+    }
+  }
+
+
   &__list {
     @media only screen and (max-width: 1200px) {
       right: auto;
