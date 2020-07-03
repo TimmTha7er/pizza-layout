@@ -53,14 +53,23 @@
     list-style-type: none;
     margin-right: 10px;
     padding: 14px 28px;
-    background: #f9f9f9;
+    background-color: #f9f9f9;
     border-radius: 30px;
     font-weight: bold;
     cursor: pointer;
+    transition: background-color 0.25s ease, box-shadow 0.25s ease;
 
     &_active {
       color: #fff;
-      background: #282828;
+      background-color: #282828;
+    }
+
+    &:hover {
+      background-color: #ececec;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+    }
+    &:active {
+      box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.04);
     }
 
     @media only screen and (max-width: 768px) {
@@ -163,6 +172,11 @@
     max-height: 260px;
     max-width: 260px;
     margin: 0 auto 12px auto;
+    transition: transform 0.25s ease;
+
+    &:hover {
+      transform: translate(0, 3px);
+    }
   }
 
   &__img {
@@ -192,12 +206,13 @@
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    transition: box-shadow 0.25s ease, background-color 0.25s ease;
 
     &:hover {
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
     }
     &_active {
-      background: #ffffff;
+      background-color: #ffffff;
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
     }
     &_disable {
@@ -215,12 +230,13 @@
     padding: 9px;
     border-radius: 5px;
     cursor: pointer;
+    transition: box-shadow 0.25s ease, background-color 0.25s ease;
 
     &:hover {
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
     }
     &_active {
-      background: #ffffff;
+      background-color: #ffffff;
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
     }
     &_disable {
@@ -266,10 +282,13 @@
     border-radius: 30px;
     border: 1px solid $accent-color;
     cursor: pointer;
+    transition: box-shadow 0.25s ease, background-color 0.25s ease,
+      color 0.25s ease;
 
     &:hover {
       background-color: $accent-color;
       color: #fff;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 
       .pizza__count-wrap {
         background-color: #fff;
@@ -277,6 +296,10 @@
       .pizza__count {
         color: $accent-color;
       }
+    }
+
+    &:active {
+      box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.1);
     }
   }
 
@@ -290,6 +313,7 @@
     height: 22px;
     border-radius: 50%;
     background-color: $accent-color;
+    transition: background-color 0.25s ease;
   }
 
   &__count {
@@ -301,5 +325,6 @@
     border-radius: 50%;
     font-size: 13px;
     color: #ffffff;
+    transition: color 0.25s ease, background-color 0.25s ease;
   }
 }
