@@ -1,0 +1,70 @@
+// ----------------------------------------------
+//		checkout
+// ----------------------------------------------
+
+.checkout {
+  font-family: 'Mercury114', 'Arial Narrow', Arial, sans-serif;
+  padding: 25px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 30px;
+  border-radius: 8px;
+  max-width: 370px;
+
+  &__title {
+    font-size: 20px;
+    margin-bottom: 35px;
+  }
+
+  &__list {
+    margin-bottom: 55px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+
+  &__item-name {
+    font-weight: 400;
+    margin-bottom: 5px;
+  }
+
+  &__item-size {
+    font-size: 14px;
+  }
+
+  &__item-base {
+    font-size: 14px;
+  }
+
+  &__item-price {
+    position: relative;
+    font-size: 20px;
+    font-weight: 700;
+    padding-right: 25px;
+
+    &::before {
+      position: absolute;
+      right: 0;
+      top: 3px;
+    }
+  }
+
+  &__total-price {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__total-amount {
+    position: relative;
+    font-size: 20px;
+    font-weight: 700;
+    padding-right: 25px;
+
+    &::before {
+      position: absolute;
+      right: 0;
+      top: 3px;
+    }
+  }
+}
