@@ -36,28 +36,6 @@ body {
   }
 }
 
-.hidden {
-  display: none;
-}
-
-.link {
-  text-decoration: none;
-  color: $text-color;
-  transition: color 0.25s ease;
-  scroll-behavior: smooth !important;
-
-  &:link {
-  }
-  &:visited {
-  }
-  &:hover {
-    color: $accent-color;
-  }
-  &:active {
-    color: $accent-color;
-  }
-}
-
 .container {
   max-width: 1340px;
   margin: 0 auto;
@@ -126,6 +104,48 @@ h4 {
   font-size: 16px;
 }
 
+.hidden {
+  display: none;
+}
+
+.link {
+  text-decoration: none;
+  color: $text-color;
+  transition: color 0.25s ease;
+  scroll-behavior: smooth !important;
+
+  &:link {
+  }
+  &:visited {
+  }
+  &:hover {
+    color: $accent-color;
+  }
+  &:active {
+    color: $accent-color;
+  }
+}
+
+.input {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid rgba(115, 121, 140, 0.32);
+  padding: 0px 15px;
+  font-size: 16px;
+  line-height: 40px;
+  outline: none;
+  transition: border-color 0.25s ease;
+
+  &_last {
+    margin-bottom: 5px;
+  }
+
+  &:focus {
+    border-color: $accent-color;
+  }
+}
+
 .button {
   font-size: 16px;
   padding: 20px 34px 16px 34px;
@@ -142,6 +162,54 @@ h4 {
     // padding: 10px 24px 6px 24px;
   }
 }
+
+.button_btn-back {
+  display: inline-block;
+  border: 1px solid $text-lighter;
+  color: $text-lighter;
+  background-color: transparent;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.01);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+  }
+  &:active {
+    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  &_hidden {
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    margin-bottom: 10px;
+  }
+}
+
+.button_btn-pay {
+  display: inline-block;
+  padding: 20px 40px 16px 40px;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    background-color: rgb(217, 99, 52);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+  }
+  &:active {
+    background-color: $accent-color;
+    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.04);
+  }
+
+  &_hidden {
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+
 
 @media only screen and (max-width: 1200px) {
 }
