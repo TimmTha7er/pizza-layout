@@ -2,24 +2,39 @@
 //		login-form
 // ----------------------------------------------
 .login {
-  max-width: 680px;
   padding: 36px 48px;
   border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 30px;
+
+  &__container {
+    box-shadow: none;
+    max-width: 345px;
+
+    @media only screen and (max-width: 1200px) {
+      max-width: 345px;
+    }
+    @media only screen and (max-width: 992px) {
+      max-width: 345px;
+    }
+    @media only screen and (max-width: 768px) {
+      max-width: 345px;
+    }
+    @media only screen and (max-width: 480px) {
+      max-width: 345px;
+    }
+  }
 
   &__title {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
 }
 
 .login-form {
-  max-width: 235px;
+  &__inputs {
+    margin-bottom: 30px;
+  }
 
   &__input {
     margin-bottom: 15px;
-    max-width: 245px;
-
-   
   }
 
   &__label {
@@ -27,33 +42,18 @@
     margin-bottom: 5px;
   }
 
-  &__register-link {
-    display: block;
-    text-align: right;
-    margin-bottom: 20px;
-    font-size: 15px;
+  &__btns {
+    display: flex;
+    justify-content: space-between;
   }
 
-  &__btn {
-    display: block;
-    max-width: 125px;
-    margin-left: auto;
-    padding: 14px 40px 14px 40px;
-    transition: background-color 0.25s ease, box-shadow 0.25s ease;
+  &__reg-btn {
+    margin-right: 0;
+    padding: 12px 25px 12px 25px;
+  }
 
-    &:hover {
-      background-color: rgb(217, 99, 52);
-      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
-    }
-    &:active {
-      background-color: $accent-color;
-      box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.04);
-    }
-
-    &_hidden {
-      @media only screen and (max-width: 768px) {
-        display: none;
-      }
-    }
+  &__log-btn {
+    margin-right: 0;
+    padding: 12px 25px 12px 25px;
   }
 }
