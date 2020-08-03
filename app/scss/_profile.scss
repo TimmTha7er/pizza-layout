@@ -1,36 +1,36 @@
 // ----------------------------------------------
-//		login-form
+//		profile
 // ----------------------------------------------
-.login {
-  padding: 36px 48px;
-  border-radius: 20px;
+.profile {
+  padding: 70px 0;
 
   &__container {
+    max-width: 625px;
     box-shadow: none;
-    max-width: 345px;
 
     @media only screen and (max-width: 1200px) {
-      max-width: 345px;
+      max-width: 425px;
     }
     @media only screen and (max-width: 992px) {
-      max-width: 345px;
+      max-width: 425px;
     }
     @media only screen and (max-width: 768px) {
-      max-width: 345px;
+      max-width: 425px;
     }
     @media only screen and (max-width: 480px) {
-      max-width: 345px;
+      max-width: 425px;
     }
   }
 
   &__title {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
   }
 }
 
-.login-form {
-  &__inputs {
-    margin-bottom: 30px;
+.profile-form {
+  &__btns {
+    display: flex;
+    justify-content: space-between;
   }
 
   &__input {
@@ -42,17 +42,15 @@
     margin-bottom: 5px;
   }
 
-  &__btns {
-    display: flex;
-    justify-content: space-between;
+  &__textarea {
+    width: 100%;
+    min-height: 75px;
+    outline: none;
+    resize: none;
+    margin-bottom: 35px;
   }
 
-  // &__reg-btn {
-  //   margin-right: 0;
-  //   padding: 12px 25px 12px 25px;
-  // }
-
-  // &__log-btn {
+  // &__btn {
   //   margin-right: 0;
   //   padding: 12px 25px 12px 25px;
   // }
