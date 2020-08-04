@@ -16,25 +16,15 @@
 
   &__container {
     max-width: 825px;
-    box-shadow: none;
-
-    @media only screen and (max-width: 768px) {
-      padding: 0 10px;
-    }
-    @media only screen and (max-width: 480px) {
-      padding: 0 5px;
-    }
   }
 
   &__top-line {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding-bottom: 32px;
 
-    @media only screen and (max-width: 480px) {
-      flex-direction: column;
-    }
+    
+   
   }
 
   &__details {
@@ -54,12 +44,6 @@
     }
   }
 
-  &__title {
-    @media only screen and (max-width: 480px) {
-      margin-bottom: 15px;
-    }
-  }
-
   &__clear {
     color: $text-lighter;
     cursor: pointer;
@@ -67,6 +51,12 @@
 
     &:hover {
       color: $accent-color;
+    }
+
+    &_hide {
+      @media only screen and (max-width: 480px) {
+        display: none;
+      }
     }
   }
 

@@ -7,358 +7,365 @@
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
-    <!-- 5 Сделать рефакторинг -->
-    <div class="container">
+    <!-- сделать унификацию для кнопок -->
+    <!-- Сделать рефакторинг -->
+    <div class="main-wrapper">
       <header class="header">
-	<a href="#" class="logo link">
-		<img class="logo__img" src="img/header/header-logo.png" alt="logo" />
-		<div class="logo__text">
-			<h1 class="logo__title">react pizza</h1>
-			<h4 class="logo__subtitle">самая вкусная пицца во вселенной</h2>
-		</div>
-	</a>
-	<div class="user-bar">
-		<button class="login-btn user-bar__login-btn button">Войти</button>
-		<a href="#" class="cart-btn">
-			<div class="cart-btn__summ icon-rouble">520</div>
-			<div class="cart-btn__cart icon-basket">3</div>
+	<div class="container header__container">
+		<a href="#" class="logo header__logo link">
+			<img class="logo__img" src="img/header/header-logo.png" alt="logo" />
+			<div class="logo__text">
+				<h1 class="logo__title">react pizza</h1>
+				<h4 class="logo__subtitle">самая вкусная пицца во вселенной</h2>
+			</div>
 		</a>
+		<div class="user-bar">
+			<button class="login-btn user-bar__login-btn button">Войти</button>
+			<a href="#" class="cart-btn">
+				<div class="cart-btn__summ icon-rouble">520</div>
+				<div class="cart-btn__cart icon-basket">3</div>
+			</a>
+		</div>
 	</div>
 </header>
 
       <main>
         <section class="content">
-  <div class="content__top-line">
-    <div class="categories">
-      <ul class="categories__list">
-        <li class="categories__item categories__item_active">Все</li>
-        <li class="categories__item">Мясные</li>
-        <li class="categories__item">Вегетарианская</li>
-        <li class="categories__item">Гриль</li>
-        <li class="categories__item">Острые</li>
-      </ul>
-    </div>
-
-    <div class="sort icon-up-dir">
-      <span class="sort__label">
-        Сортировка по:&nbsp;
-      </span>
-      <span class="sort__selected-item">популярности</span>
-
-      <div class="sort-popup sort__sort-popup">
-        <ul class="sort-popup__list">
-          <li class="sort-popup__item sort-popup__item_active">популярности</li>
-          <li class="sort-popup__item">цене</li>
-          <li class="sort-popup__item">алфавиту</li>
+  <div class="container content__container">
+    <div class="content__top-line">
+      <div class="categories">
+        <ul class="categories__list">
+          <li class="categories__item categories__item_active">Все</li>
+          <li class="categories__item">Мясные</li>
+          <li class="categories__item">Вегетарианская</li>
+          <li class="categories__item">Гриль</li>
+          <li class="categories__item">Острые</li>
         </ul>
       </div>
+
+      <div class="sort icon-up-dir">
+        <span class="sort__label">
+          Сортировка по:&nbsp;
+        </span>
+        <span class="sort__selected-item">популярности</span>
+
+        <div class="sort-popup sort__sort-popup">
+          <ul class="sort-popup__list">
+            <li class="sort-popup__item sort-popup__item_active">
+              популярности
+            </li>
+            <li class="sort-popup__item">цене</li>
+            <li class="sort-popup__item">алфавиту</li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="content__body">
-    <h2 class="content__title">Все пиццы</h2>
-    <div class="content__pizza-list">
-      <div class="pizza content__pizza">
-        <div class="pizza__img-wrap">
-          <img
-            class="pizza__img"
-            src="img/content/cheeseburger-pizza.png"
-            alt="pizza"
-          />
-        </div>
+    <div class="content__body">
+      <h2 class="content__title">Все пиццы</h2>
+      <div class="content__pizza-list">
+        <div class="pizza content__pizza">
+          <div class="pizza__img-wrap">
+            <img
+              class="pizza__img"
+              src="img/content/cheeseburger-pizza.png"
+              alt="pizza"
+            />
+          </div>
 
-        <h3 class="pizza__name">Чизбургер-пицца</h3>
+          <h3 class="pizza__name">Чизбургер-пицца</h3>
 
-        <div class="pizza__options">
-          <div class="pizza__base-list">
-            <span class="pizza__base pizza__base_active">тонкое</span>
-            <span class="pizza__base pizza__base_disable">традиционное</span>
+          <div class="pizza__options">
+            <div class="pizza__base-list">
+              <span class="pizza__base pizza__base_active">тонкое</span>
+              <span class="pizza__base pizza__base_disable">традиционное</span>
+            </div>
+            <div class="pizza__size-list">
+              <span class="pizza__size pizza__size_active">26 см.</span>
+              <span class="pizza__size">30 см.</span>
+              <span class="pizza__size">40 см.</span>
+            </div>
           </div>
-          <div class="pizza__size-list">
-            <span class="pizza__size pizza__size_active">26 см.</span>
-            <span class="pizza__size">30 см.</span>
-            <span class="pizza__size">40 см.</span>
-          </div>
-        </div>
-        <div class="pizza__bot-line">
-          <div class="pizza__price icon-rouble">
-            395
-          </div>
-          <div class="pizza__btn icon-plus">
-            <span class="pizza__btn-text">Добавить</span>
-            <div class="pizza__count-wrap">
-              <span class="pizza__count">2</span>
+          <div class="pizza__bot-line">
+            <div class="pizza__price icon-rouble">
+              395
+            </div>
+            <div class="pizza__btn icon-plus">
+              <span class="pizza__btn-text">Добавить</span>
+              <div class="pizza__count-wrap">
+                <span class="pizza__count">2</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="pizza content__pizza">
-        <div class="pizza__img-wrap">
-          <img
-            class="pizza__img"
-            src="img/content/cheeseburger-pizza.png"
-            alt="pizza"
-          />
-        </div>
+        <div class="pizza content__pizza">
+          <div class="pizza__img-wrap">
+            <img
+              class="pizza__img"
+              src="img/content/cheeseburger-pizza.png"
+              alt="pizza"
+            />
+          </div>
 
-        <h3 class="pizza__name">Чизбургер-пицца</h3>
+          <h3 class="pizza__name">Чизбургер-пицца</h3>
 
-        <div class="pizza__options">
-          <div class="pizza__base-list">
-            <span class="pizza__base pizza__base_active">тонкое</span>
-            <span class="pizza__base pizza__base_disable">традиционное</span>
+          <div class="pizza__options">
+            <div class="pizza__base-list">
+              <span class="pizza__base pizza__base_active">тонкое</span>
+              <span class="pizza__base pizza__base_disable">традиционное</span>
+            </div>
+            <div class="pizza__size-list">
+              <span class="pizza__size pizza__size_active">26 см.</span>
+              <span class="pizza__size">30 см.</span>
+              <span class="pizza__size">40 см.</span>
+            </div>
           </div>
-          <div class="pizza__size-list">
-            <span class="pizza__size pizza__size_active">26 см.</span>
-            <span class="pizza__size">30 см.</span>
-            <span class="pizza__size">40 см.</span>
-          </div>
-        </div>
-        <div class="pizza__bot-line">
-          <div class="pizza__price icon-rouble">
-            395
-          </div>
-          <div class="pizza__btn icon-plus">
-            <span class="pizza__btn-text">Добавить</span>
-            <div class="pizza__count-wrap">
-              <span class="pizza__count">2</span>
+          <div class="pizza__bot-line">
+            <div class="pizza__price icon-rouble">
+              395
+            </div>
+            <div class="pizza__btn icon-plus">
+              <span class="pizza__btn-text">Добавить</span>
+              <div class="pizza__count-wrap">
+                <span class="pizza__count">2</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="pizza content__pizza">
-        <div class="pizza__img-wrap">
-          <img
-            class="pizza__img"
-            src="img/content/cheeseburger-pizza.png"
-            alt="pizza"
-          />
-        </div>
+        <div class="pizza content__pizza">
+          <div class="pizza__img-wrap">
+            <img
+              class="pizza__img"
+              src="img/content/cheeseburger-pizza.png"
+              alt="pizza"
+            />
+          </div>
 
-        <h3 class="pizza__name">Чизбургер-пицца</h3>
+          <h3 class="pizza__name">Чизбургер-пицца</h3>
 
-        <div class="pizza__options">
-          <div class="pizza__base-list">
-            <span class="pizza__base pizza__base_active">тонкое</span>
-            <span class="pizza__base pizza__base_disable">традиционное</span>
+          <div class="pizza__options">
+            <div class="pizza__base-list">
+              <span class="pizza__base pizza__base_active">тонкое</span>
+              <span class="pizza__base pizza__base_disable">традиционное</span>
+            </div>
+            <div class="pizza__size-list">
+              <span class="pizza__size pizza__size_active">26 см.</span>
+              <span class="pizza__size">30 см.</span>
+              <span class="pizza__size">40 см.</span>
+            </div>
           </div>
-          <div class="pizza__size-list">
-            <span class="pizza__size pizza__size_active">26 см.</span>
-            <span class="pizza__size">30 см.</span>
-            <span class="pizza__size">40 см.</span>
-          </div>
-        </div>
-        <div class="pizza__bot-line">
-          <div class="pizza__price icon-rouble">
-            395
-          </div>
-          <div class="pizza__btn icon-plus">
-            <span class="pizza__btn-text">Добавить</span>
-            <div class="pizza__count-wrap">
-              <span class="pizza__count">2</span>
+          <div class="pizza__bot-line">
+            <div class="pizza__price icon-rouble">
+              395
+            </div>
+            <div class="pizza__btn icon-plus">
+              <span class="pizza__btn-text">Добавить</span>
+              <div class="pizza__count-wrap">
+                <span class="pizza__count">2</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="pizza content__pizza">
-        <div class="pizza__img-wrap">
-          <img
-            class="pizza__img"
-            src="img/content/cheeseburger-pizza.png"
-            alt="pizza"
-          />
-        </div>
+        <div class="pizza content__pizza">
+          <div class="pizza__img-wrap">
+            <img
+              class="pizza__img"
+              src="img/content/cheeseburger-pizza.png"
+              alt="pizza"
+            />
+          </div>
 
-        <h3 class="pizza__name">Чизбургер-пицца</h3>
+          <h3 class="pizza__name">Чизбургер-пицца</h3>
 
-        <div class="pizza__options">
-          <div class="pizza__base-list">
-            <span class="pizza__base pizza__base_active">тонкое</span>
-            <span class="pizza__base pizza__base_disable">традиционное</span>
+          <div class="pizza__options">
+            <div class="pizza__base-list">
+              <span class="pizza__base pizza__base_active">тонкое</span>
+              <span class="pizza__base pizza__base_disable">традиционное</span>
+            </div>
+            <div class="pizza__size-list">
+              <span class="pizza__size pizza__size_active">26 см.</span>
+              <span class="pizza__size">30 см.</span>
+              <span class="pizza__size">40 см.</span>
+            </div>
           </div>
-          <div class="pizza__size-list">
-            <span class="pizza__size pizza__size_active">26 см.</span>
-            <span class="pizza__size">30 см.</span>
-            <span class="pizza__size">40 см.</span>
-          </div>
-        </div>
-        <div class="pizza__bot-line">
-          <div class="pizza__price icon-rouble">
-            395
-          </div>
-          <div class="pizza__btn icon-plus">
-            <span class="pizza__btn-text">Добавить</span>
-            <div class="pizza__count-wrap">
-              <span class="pizza__count">2</span>
+          <div class="pizza__bot-line">
+            <div class="pizza__price icon-rouble">
+              395
+            </div>
+            <div class="pizza__btn icon-plus">
+              <span class="pizza__btn-text">Добавить</span>
+              <div class="pizza__count-wrap">
+                <span class="pizza__count">2</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="pizza content__pizza">
-        <div class="pizza__img-wrap">
-          <img
-            class="pizza__img"
-            src="img/content/cheeseburger-pizza.png"
-            alt="pizza"
-          />
-        </div>
+        <div class="pizza content__pizza">
+          <div class="pizza__img-wrap">
+            <img
+              class="pizza__img"
+              src="img/content/cheeseburger-pizza.png"
+              alt="pizza"
+            />
+          </div>
 
-        <h3 class="pizza__name">Чизбургер-пицца</h3>
+          <h3 class="pizza__name">Чизбургер-пицца</h3>
 
-        <div class="pizza__options">
-          <div class="pizza__base-list">
-            <span class="pizza__base pizza__base_active">тонкое</span>
-            <span class="pizza__base pizza__base_disable">традиционное</span>
+          <div class="pizza__options">
+            <div class="pizza__base-list">
+              <span class="pizza__base pizza__base_active">тонкое</span>
+              <span class="pizza__base pizza__base_disable">традиционное</span>
+            </div>
+            <div class="pizza__size-list">
+              <span class="pizza__size pizza__size_active">26 см.</span>
+              <span class="pizza__size">30 см.</span>
+              <span class="pizza__size">40 см.</span>
+            </div>
           </div>
-          <div class="pizza__size-list">
-            <span class="pizza__size pizza__size_active">26 см.</span>
-            <span class="pizza__size">30 см.</span>
-            <span class="pizza__size">40 см.</span>
-          </div>
-        </div>
-        <div class="pizza__bot-line">
-          <div class="pizza__price icon-rouble">
-            395
-          </div>
-          <div class="pizza__btn icon-plus">
-            <span class="pizza__btn-text">Добавить</span>
-            <div class="pizza__count-wrap">
-              <span class="pizza__count">2</span>
+          <div class="pizza__bot-line">
+            <div class="pizza__price icon-rouble">
+              395
+            </div>
+            <div class="pizza__btn icon-plus">
+              <span class="pizza__btn-text">Добавить</span>
+              <div class="pizza__count-wrap">
+                <span class="pizza__count">2</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="pizza content__pizza">
-        <div class="pizza__img-wrap">
-          <img
-            class="pizza__img"
-            src="img/content/cheeseburger-pizza.png"
-            alt="pizza"
-          />
-        </div>
+        <div class="pizza content__pizza">
+          <div class="pizza__img-wrap">
+            <img
+              class="pizza__img"
+              src="img/content/cheeseburger-pizza.png"
+              alt="pizza"
+            />
+          </div>
 
-        <h3 class="pizza__name">Чизбургер-пицца</h3>
+          <h3 class="pizza__name">Чизбургер-пицца</h3>
 
-        <div class="pizza__options">
-          <div class="pizza__base-list">
-            <span class="pizza__base pizza__base_active">тонкое</span>
-            <span class="pizza__base pizza__base_disable">традиционное</span>
+          <div class="pizza__options">
+            <div class="pizza__base-list">
+              <span class="pizza__base pizza__base_active">тонкое</span>
+              <span class="pizza__base pizza__base_disable">традиционное</span>
+            </div>
+            <div class="pizza__size-list">
+              <span class="pizza__size pizza__size_active">26 см.</span>
+              <span class="pizza__size">30 см.</span>
+              <span class="pizza__size">40 см.</span>
+            </div>
           </div>
-          <div class="pizza__size-list">
-            <span class="pizza__size pizza__size_active">26 см.</span>
-            <span class="pizza__size">30 см.</span>
-            <span class="pizza__size">40 см.</span>
-          </div>
-        </div>
-        <div class="pizza__bot-line">
-          <div class="pizza__price icon-rouble">
-            395
-          </div>
-          <div class="pizza__btn icon-plus">
-            <span class="pizza__btn-text">Добавить</span>
-            <div class="pizza__count-wrap">
-              <span class="pizza__count">2</span>
+          <div class="pizza__bot-line">
+            <div class="pizza__price icon-rouble">
+              395
+            </div>
+            <div class="pizza__btn icon-plus">
+              <span class="pizza__btn-text">Добавить</span>
+              <div class="pizza__count-wrap">
+                <span class="pizza__count">2</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="pizza content__pizza">
-        <div class="pizza__img-wrap">
-          <img
-            class="pizza__img"
-            src="img/content/cheeseburger-pizza.png"
-            alt="pizza"
-          />
-        </div>
+        <div class="pizza content__pizza">
+          <div class="pizza__img-wrap">
+            <img
+              class="pizza__img"
+              src="img/content/cheeseburger-pizza.png"
+              alt="pizza"
+            />
+          </div>
 
-        <h3 class="pizza__name">Чизбургер-пицца</h3>
+          <h3 class="pizza__name">Чизбургер-пицца</h3>
 
-        <div class="pizza__options">
-          <div class="pizza__base-list">
-            <span class="pizza__base pizza__base_active">тонкое</span>
-            <span class="pizza__base pizza__base_disable">традиционное</span>
+          <div class="pizza__options">
+            <div class="pizza__base-list">
+              <span class="pizza__base pizza__base_active">тонкое</span>
+              <span class="pizza__base pizza__base_disable">традиционное</span>
+            </div>
+            <div class="pizza__size-list">
+              <span class="pizza__size pizza__size_active">26 см.</span>
+              <span class="pizza__size">30 см.</span>
+              <span class="pizza__size">40 см.</span>
+            </div>
           </div>
-          <div class="pizza__size-list">
-            <span class="pizza__size pizza__size_active">26 см.</span>
-            <span class="pizza__size">30 см.</span>
-            <span class="pizza__size">40 см.</span>
-          </div>
-        </div>
-        <div class="pizza__bot-line">
-          <div class="pizza__price icon-rouble">
-            395
-          </div>
-          <div class="pizza__btn icon-plus">
-            <span class="pizza__btn-text">Добавить</span>
-            <div class="pizza__count-wrap">
-              <span class="pizza__count">2</span>
+          <div class="pizza__bot-line">
+            <div class="pizza__price icon-rouble">
+              395
+            </div>
+            <div class="pizza__btn icon-plus">
+              <span class="pizza__btn-text">Добавить</span>
+              <div class="pizza__count-wrap">
+                <span class="pizza__count">2</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="pizza content__pizza">
-        <div class="pizza__img-wrap">
-          <img
-            class="pizza__img"
-            src="img/content/cheeseburger-pizza.png"
-            alt="pizza"
-          />
-        </div>
+        <div class="pizza content__pizza">
+          <div class="pizza__img-wrap">
+            <img
+              class="pizza__img"
+              src="img/content/cheeseburger-pizza.png"
+              alt="pizza"
+            />
+          </div>
 
-        <h3 class="pizza__name">Чизбургер-пицца</h3>
+          <h3 class="pizza__name">Чизбургер-пицца</h3>
 
-        <div class="pizza__options">
-          <div class="pizza__base-list">
-            <span class="pizza__base pizza__base_active">тонкое</span>
-            <span class="pizza__base pizza__base_disable">традиционное</span>
+          <div class="pizza__options">
+            <div class="pizza__base-list">
+              <span class="pizza__base pizza__base_active">тонкое</span>
+              <span class="pizza__base pizza__base_disable">традиционное</span>
+            </div>
+            <div class="pizza__size-list">
+              <span class="pizza__size pizza__size_active">26 см.</span>
+              <span class="pizza__size">30 см.</span>
+              <span class="pizza__size">40 см.</span>
+            </div>
           </div>
-          <div class="pizza__size-list">
-            <span class="pizza__size pizza__size_active">26 см.</span>
-            <span class="pizza__size">30 см.</span>
-            <span class="pizza__size">40 см.</span>
-          </div>
-        </div>
-        <div class="pizza__bot-line">
-          <div class="pizza__price icon-rouble">
-            395
-          </div>
-          <div class="pizza__btn icon-plus">
-            <span class="pizza__btn-text">Добавить</span>
-            <div class="pizza__count-wrap">
-              <span class="pizza__count">2</span>
+          <div class="pizza__bot-line">
+            <div class="pizza__price icon-rouble">
+              395
+            </div>
+            <div class="pizza__btn icon-plus">
+              <span class="pizza__btn-text">Добавить</span>
+              <div class="pizza__count-wrap">
+                <span class="pizza__count">2</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="pizza content__pizza">
-        <div class="pizza__img-wrap">
-          <img
-            class="pizza__img"
-            src="img/content/cheeseburger-pizza.png"
-            alt="pizza"
-          />
-        </div>
+        <div class="pizza content__pizza">
+          <div class="pizza__img-wrap">
+            <img
+              class="pizza__img"
+              src="img/content/cheeseburger-pizza.png"
+              alt="pizza"
+            />
+          </div>
 
-        <h3 class="pizza__name">Чизбургер-пицца</h3>
+          <h3 class="pizza__name">Чизбургер-пицца</h3>
 
-        <div class="pizza__options">
-          <div class="pizza__base-list">
-            <span class="pizza__base pizza__base_active">тонкое</span>
-            <span class="pizza__base pizza__base_disable">традиционное</span>
+          <div class="pizza__options">
+            <div class="pizza__base-list">
+              <span class="pizza__base pizza__base_active">тонкое</span>
+              <span class="pizza__base pizza__base_disable">традиционное</span>
+            </div>
+            <div class="pizza__size-list">
+              <span class="pizza__size pizza__size_active">26 см.</span>
+              <span class="pizza__size">30 см.</span>
+              <span class="pizza__size">40 см.</span>
+            </div>
           </div>
-          <div class="pizza__size-list">
-            <span class="pizza__size pizza__size_active">26 см.</span>
-            <span class="pizza__size">30 см.</span>
-            <span class="pizza__size">40 см.</span>
-          </div>
-        </div>
-        <div class="pizza__bot-line">
-          <div class="pizza__price icon-rouble">
-            395
-          </div>
-          <div class="pizza__btn icon-plus">
-            <span class="pizza__btn-text">Добавить</span>
-            <div class="pizza__count-wrap">
-              <span class="pizza__count">2</span>
+          <div class="pizza__bot-line">
+            <div class="pizza__price icon-rouble">
+              395
+            </div>
+            <div class="pizza__btn icon-plus">
+              <span class="pizza__btn-text">Добавить</span>
+              <div class="pizza__count-wrap">
+                <span class="pizza__count">2</span>
+              </div>
             </div>
           </div>
         </div>
@@ -374,7 +381,8 @@
         Корзина
       </h2>
       <div class="cart__clear icon-trash-empty">
-        Очистить корзину
+        Очистить
+        <span class="cart__clear_hide">корзину</span>
       </div>
     </div>
 
@@ -493,110 +501,108 @@
 
         <section class="ordering">
   <div class="container ordering__container">
-    <h2 class="ordering__title">Оформление заказа</h2>
-    <div class="ordering__content">
-      <div class="ordering__left-col">
-        <div class="delivery ordering__delivery">
-          <form class="delivery__form">
-            <label class="delivery__label">Имя</label>
-            <input type="text" class="delivery__input input" />
-            <label class="delivery__label">Номер телефона</label>
-            <input type="text" class="delivery__input input" />
-            <label class="delivery__label">Адрес доставки</label>
-            <textarea class="delivery__textarea input"></textarea>
-          </form>
-        </div>
-        <div class="payment">
-          <h2 class="payment__title">Оплата</h2>
-          <form class="payment__form">
+    <div class="ordering__left-col">
+      <h2 class="ordering__title">Оформление заказа</h2>
+      <div class="delivery ordering__delivery">
+        <form class="delivery__form">
+          <label class="delivery__label">Имя</label>
+          <input type="text" class="delivery__input input" />
+          <label class="delivery__label">Номер телефона</label>
+          <input type="text" class="delivery__input input" />
+          <label class="delivery__label">Адрес доставки</label>
+          <textarea class="delivery__textarea input"></textarea>
+        </form>
+      </div>
+      <div class="payment">
+        <h2 class="payment__title">Оплата</h2>
+        <form class="payment__form">
+          <input
+            type="text"
+            class="payment__input payment__input_number input"
+            placeholder="Нормер карты"
+          />
+
+          <div class="payment__row">
             <input
               type="text"
-              class="payment__input payment__input_number input"
-              placeholder="Нормер карты"
+              class="payment__input payment__input_validity input"
+              placeholder="Срок действия"
             />
+            <input
+              type="text"
+              class="payment__input payment__input_cvc input"
+              placeholder="CVC"
+            />
+          </div>
 
-            <div class="payment__row">
-              <input
-                type="text"
-                class="payment__input payment__input_validity input"
-                placeholder="Срок действия"
-              />
-              <input
-                type="text"
-                class="payment__input payment__input_cvc input"
-                placeholder="CVC"
-              />
-            </div>
-
-            <div class="payment__btns">
-              <a class="button_btn-back button">
-                <span class="button_btn-back_hidden">назад</span>
-                в корзину
-              </a>
-              <a class="button_btn-pay button"
-                >Оформить
-                <span class="button_btn-back_hidden">заказ</span>
-              </a>
-            </div>
-          </form>
-        </div>
+          <div class="payment__btns-block">
+            <a class="button_btn-back button">
+              <span class="button_btn-back_hidden">назад</span>
+              в корзину
+            </a>
+            <a class="button_btn-pay button"
+              >Оформить
+              <span class="button_btn-back_hidden">заказ</span>
+            </a>
+          </div>
+        </form>
       </div>
-      <div class="ordering__right-col">
-        <div class="checkout">
-          <h3 class="checkout__title">Состав заказа</h3>
-          <div class="checkout__list">
-            <div class="checkout__item">
-              <div class="checkout__item-descr">
-                <h4 class="checkout__item-name">Чизбургер-пицца</h4>
-                <span class="checkout__item-size">30см, </span>
-                <span class="checkout__item-base">традиционное тесто</span>
-              </div>
-              <div class="checkout__item-price icon-rouble">
-                <span class="checkout__item-count">2 x </span>
-                <span class="checkout__item-cost">395</span>
-              </div>
+    </div>
+    <div class="ordering__right-col">
+      <div class="checkout">
+        <h3 class="checkout__title">Состав заказа</h3>
+        <div class="checkout__list">
+          <div class="checkout__item">
+            <div class="checkout__item-descr">
+              <h4 class="checkout__item-name">Чизбургер-пицца</h4>
+              <span class="checkout__item-size">30см, </span>
+              <span class="checkout__item-base">традиционное тесто</span>
             </div>
-            <div class="checkout__item">
-              <div class="checkout__item-descr">
-                <h4 class="checkout__item-name">Чизбургер-пицца</h4>
-                <span class="checkout__item-size">30см, </span>
-                <span class="checkout__item-base">традиционное тесто</span>
-              </div>
-              <div class="checkout__item-price icon-rouble">
-                <span class="checkout__item-count">2 x </span>
-                <span class="checkout__item-cost">395</span>
-              </div>
-            </div>
-            <div class="checkout__item">
-              <div class="checkout__item-descr">
-                <h4 class="checkout__item-name">Чизбургер-пицца</h4>
-                <span class="checkout__item-size">30см, </span>
-                <span class="checkout__item-base">традиционное тесто</span>
-              </div>
-              <div class="checkout__item-price icon-rouble">
-                <span class="checkout__item-count"> </span>
-                <span class="checkout__item-cost">395</span>
-              </div>
-            </div>
-            <div class="checkout__item">
-              <div class="checkout__item-descr">
-                <h4 class="checkout__item-name">Чизбургер-пицца</h4>
-                <span class="checkout__item-size">30см, </span>
-                <span class="checkout__item-base">традиционное тесто</span>
-              </div>
-              <div class="checkout__item-price icon-rouble">
-                <span class="checkout__item-count"> </span>
-                <span class="checkout__item-cost">395</span>
-              </div>
+            <div class="checkout__item-price icon-rouble">
+              <span class="checkout__item-count">2 x </span>
+              <span class="checkout__item-cost">395</span>
             </div>
           </div>
-          <div class="checkout__total-price">
-            <div class="checkout__total-price-text">
-              Сумма к оплате
+          <div class="checkout__item">
+            <div class="checkout__item-descr">
+              <h4 class="checkout__item-name">Чизбургер-пицца</h4>
+              <span class="checkout__item-size">30см, </span>
+              <span class="checkout__item-base">традиционное тесто</span>
             </div>
-            <div class="checkout__total-amount icon-rouble">
-              1580
+            <div class="checkout__item-price icon-rouble">
+              <span class="checkout__item-count">2 x </span>
+              <span class="checkout__item-cost">395</span>
             </div>
+          </div>
+          <div class="checkout__item">
+            <div class="checkout__item-descr">
+              <h4 class="checkout__item-name">Чизбургер-пицца</h4>
+              <span class="checkout__item-size">30см, </span>
+              <span class="checkout__item-base">традиционное тесто</span>
+            </div>
+            <div class="checkout__item-price icon-rouble">
+              <span class="checkout__item-count"> </span>
+              <span class="checkout__item-cost">395</span>
+            </div>
+          </div>
+          <div class="checkout__item">
+            <div class="checkout__item-descr">
+              <h4 class="checkout__item-name">Чизбургер-пицца</h4>
+              <span class="checkout__item-size">30см, </span>
+              <span class="checkout__item-base">традиционное тесто</span>
+            </div>
+            <div class="checkout__item-price icon-rouble">
+              <span class="checkout__item-count"> </span>
+              <span class="checkout__item-cost">395</span>
+            </div>
+          </div>
+        </div>
+        <div class="checkout__total-price">
+          <div class="checkout__total-price-text">
+            Сумма к оплате
+          </div>
+          <div class="checkout__total-amount icon-rouble">
+            1580
           </div>
         </div>
       </div>
@@ -835,25 +841,27 @@
 
       </main>
       <footer class="footer">
-  <a href="" class="logo link footer__logo">
-    <img class="logo__img" src="img/header/header-logo.png" alt="logo" />
-    <h2 class="logo__title footer__title">React Pizza</h2>
-  </a>
-  <div class="footer-legal">
-    <div class="footer-legal__left-col">
-      <div class="footer-legal__copyright">
-        © 2020
+  <div class="container footer__container">
+    <a href="" class="logo link footer__logo">
+      <img class="logo__img" src="img/header/header-logo.png" alt="logo" />
+      <h2 class="logo__title footer__title">React Pizza</h2>
+    </a>
+    <div class="footer-legal">
+      <div class="footer-legal__left-col">
+        <div class="footer-legal__copyright">
+          © 2020
+        </div>
+        <div class="footer-legal__link-list">
+          <a href="" class="footer-legal__link link">Правовая информация</a>
+          <a href="" class="footer-legal__link link"
+            >Аллергены и информация о питании</a
+          >
+        </div>
       </div>
-      <div class="footer-legal__link-list">
-        <a href="" class="footer-legal__link link">Правовая информация</a>
-        <a href="" class="footer-legal__link link"
-          >Аллергены и информация о питании</a
-        >
-      </div>
-    </div>
-    <div class="footer-legal__right-col">
-      <div class="footer-legal__feedback">
-        feedback@dodopizza.by
+      <div class="footer-legal__right-col">
+        <div class="footer-legal__feedback">
+          feedback@dodopizza.by
+        </div>
       </div>
     </div>
   </div>

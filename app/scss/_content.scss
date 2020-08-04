@@ -2,7 +2,7 @@
 //		content
 // ----------------------------------------------
 .content {
-  padding: 40px 50px 50px 66px;
+  padding: 40px 0 50px 0;
 
   &__top-line {
     display: flex;
@@ -18,7 +18,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0 -10px;
+    margin: 0 -20px;
 
     @media only screen and (max-width: 768px) {
       justify-content: space-around;
@@ -26,24 +26,18 @@
   }
 
   &__pizza {
-    margin: 0 10px;
-  }
+    margin: 0 20px;
+    margin-bottom: 55px;
 
-  &__title {
-    margin-bottom: 40px;
-  }
-
-  @media only screen and (max-width: 1200px) {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  @media only screen and (max-width: 768px) {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  @media only screen and (max-width: 480px) {
-    padding-left: 5px;
-    padding-right: 5px;
+    @media only screen and (max-width: 992px) {
+      margin-bottom: 25px;
+    }
+    @media only screen and (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+    @media only screen and (max-width: 480px) {
+      margin-bottom: 15px;
+    }
   }
 }
 
@@ -62,8 +56,6 @@
     &_active {
       color: #fff;
       background-color: #282828;
-
-     
     }
 
     &:hover {
@@ -93,7 +85,6 @@
       box-shadow: inset 0px 4px 8px rgba(255, 255, 255, 0.5);
     }
   }
-
 
   &__list {
     @media only screen and (max-width: 1200px) {
@@ -180,8 +171,7 @@
   font-weight: bold;
   text-align: center;
   flex: 1 1 200px;
-  margin-bottom: 55px;
-
+  
   &__img-wrap {
     max-height: 260px;
     max-width: 260px;
@@ -190,6 +180,13 @@
 
     &:hover {
       transform: translate(0, 3px);
+    }
+
+    @media only screen and (max-width: 768px) {
+      margin-bottom: 10px;
+    }
+    @media only screen and (max-width: 480px) {
+      margin-bottom: 5px;
     }
   }
 
@@ -200,6 +197,13 @@
   &__name {
     font-size: 20px;
     margin-bottom: 22px;
+
+    @media only screen and (max-width: 768px) {
+      margin-bottom: 15px;
+    }
+    @media only screen and (max-width: 480px) {
+      margin-bottom: 10px;
+    }
   }
 
   &__options {

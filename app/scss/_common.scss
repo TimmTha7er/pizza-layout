@@ -19,6 +19,7 @@ body {
   font-family: 'Proxima Nova', Roboto, sans-serif;
   color: $text-color;
   overflow-x: hidden;
+  min-width: 320px;
   background-color: #ffdf8c;
   padding: 45px;
 
@@ -36,15 +37,35 @@ body {
   }
 }
 
-.container {
+.main-wrapper {
   max-width: 1340px;
   margin: 0 auto;
-  background: #ffffff;
+  background: #fff;
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.03);
   border-radius: 10px;
 
   @media only screen and (max-width: 1200px) {
     max-width: none;
+  }
+}
+
+.container {
+  max-width: 1290px;
+  margin: 0 auto;
+  // ???
+  // padding: 0 15px 0 50px;
+  padding: 0 15px;
+
+  @media only screen and (max-width: 1200px) {
+    max-width: none;
+    // ???
+    // padding: 0 15px 0 30px;
+  }
+  @media only screen and (max-width: 768px) {
+    padding: 0 10px;
+  }
+  @media only screen and (max-width: 480px) {
+    padding: 0 5px;
   }
 }
 
@@ -69,23 +90,29 @@ h1 {
 
 h2 {
   font-size: 32px;
+  margin-bottom: 35px;
 
   @media only screen and (max-width: 768px) {
     font-size: 28px;
+    margin-bottom: 25px;
   }
   @media only screen and (max-width: 480px) {
     font-size: 24px;
+    margin-bottom: 15px;
   }
 }
 
 h3 {
   font-size: 22px;
+  margin-bottom: 30px;
 
   @media only screen and (max-width: 768px) {
     font-size: 18px;
+    margin-bottom: 25px;
   }
   @media only screen and (max-width: 480px) {
     font-size: 16px;
+    margin-bottom: 20px;
   }
 }
 
