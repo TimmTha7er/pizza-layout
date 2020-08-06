@@ -15,7 +15,7 @@ html {
 // ----------------------------------------------
 body {
   font-size: 16px;
-  line-height: 1, 1875;
+  line-height: 1;
   font-family: 'Proxima Nova', Roboto, sans-serif;
   color: $text-color;
   overflow-x: hidden;
@@ -52,20 +52,30 @@ body {
 .container {
   max-width: 1290px;
   margin: 0 auto;
-  // ???
-  // padding: 0 15px 0 50px;
   padding: 0 15px;
 
   @media only screen and (max-width: 1200px) {
     max-width: none;
-    // ???
-    // padding: 0 15px 0 30px;
   }
   @media only screen and (max-width: 768px) {
     padding: 0 10px;
   }
   @media only screen and (max-width: 480px) {
     padding: 0 5px;
+  }
+}
+
+.page {
+  padding: 95px 0;
+
+  @media only screen and (max-width: 992px) {
+    padding: 55px 0;
+  }
+  @media only screen and (max-width: 768px) {
+    padding: 45px 0;
+  }
+  @media only screen and (max-width: 480px) {
+    padding: 35px 0;
   }
 }
 
@@ -122,6 +132,17 @@ h4 {
 
 .hidden {
   display: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .link {
@@ -244,16 +265,7 @@ h4 {
   }
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
+
 
 @media only screen and (max-width: 1200px) {
 }

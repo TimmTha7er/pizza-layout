@@ -3,17 +3,6 @@
 // ----------------------------------------------
 .ordering {
   position: relative;
-  padding: 95px 0;
-
-  @media only screen and (max-width: 992px) {
-    padding: 55px 0;
-  }
-  @media only screen and (max-width: 768px) {
-    padding: 45px 0;
-  }
-  @media only screen and (max-width: 480px) {
-    padding: 35px 0;
-  }
 
   &__container {
     max-width: 1025px;
