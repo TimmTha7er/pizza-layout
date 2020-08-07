@@ -58,6 +58,18 @@
     }
   }
 
+  &__back-btn {
+    padding: 20px 40px 16px 40px;
+
+    @media only screen and (max-width: 480px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__pay-btn {
+    padding: 20px 40px 16px 40px;
+  }
+
   &__total-text {
     @media only screen and (max-width: 480px) {
       display: inline-block;

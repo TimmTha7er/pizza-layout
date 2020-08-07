@@ -189,6 +189,16 @@
     }
   }
 
+  &__btn-back {
+  
+  }
+
+  &__btn-checkout {
+    @media only screen and (max-width: 480px) {
+      margin-bottom: 10px;
+    }
+  }
+
   &__input {
     margin-bottom: 15px;
 
